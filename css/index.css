@@ -1,0 +1,81 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(34,34,34);
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#corpo{
+    color: blueviolet;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#subt{
+    line-height: 10px;
+    font-size: 30px;
+}
+main h1{
+    font-family: medievalsharp;
+    text-align: center;
+    font-size: 50px;
+}
+li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 16px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blueviolet;
+    transition: 0.3s all;
+}
+span#e {
+    color: blueviolet;
+}
+
+#login {
+    border:1px solid rgb(77, 77, 77);
+    padding: 8px;
+    border-radius: 2px;
+}
+#login:hover {
+    background-color: blueviolet;
+    transition: 1s;
+    color: white;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+main h1{
+    font-size: 50px;
+}
+
+main section{
+    background-color: rgb(55, 55, 55);
+    margin: 20px 60px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+header h1{
+    font-family: medievalsharp;
+    text-align: center;
+    font-size: 50px;
+} 
