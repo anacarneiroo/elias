@@ -1,3 +1,11 @@
+<!-- <?php
+    session_start();
+
+    if (empty($_SESSION['csrf_token_login'])) {
+        $_SESSION['csrf_token_login'] = bin2hex(random_bytes(32));
+    }
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +21,17 @@
     </header>
     <main>
         <h2>LOGIN</h2>
-        <form action="../php/login.php" method="post">
+        <form action="../php/logar.php" method="post">
+
             <input type="email" placeholder="Email" name="email" maxlength="50">
             <input type="password" placeholder="Senha" name="senha" minlength="8" maxlength="8">
+
+            <input type="hidden" name="csrf_token_login" value="<?php echo $_SESSION['csrf_token_login']; ?>">
+             
             <input class="up "type="submit" value="Entrar" name="submit">
         </form>
         <div>
-            <p>Não tem uma conta? <br> <a href="register.html">  Criar uma<a></p>
+            <p>Não tem uma conta? <br> <a href="./register.php">Criar uma<a></p>
         </div>
     </main> 
 </body>
