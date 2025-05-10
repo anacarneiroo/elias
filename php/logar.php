@@ -1,12 +1,9 @@
 <?php
 
-session_start();
-if (!isset($_POST['csrf_token_login']) || $_POST['csrf_token_login'] !== $_SESSION['csrf_token_login']) {
-    die("Erro: token CSRF inválido.");
-}
-
 if (isset($_POST['submit'])) {
     include_once('connect.php');
+
+    session_start();
 
     $email = $_POST['email'];
     $senha = $_POST['senha'];
@@ -21,21 +18,22 @@ if (isset($_POST['submit'])) {
     if ($stmt->rowCount() < 1) {
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
-        header('Location: ../login-register/register.php');
+        header('Location: ../login-register/register.html');
+        exit();
     }
 
     if (password_verify($senha, $usuario['senha'])) {
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $senha;
+        $_SESSION['senha'] = $usuario['senha']; 
+        $_SESSION['email'] = $usuario['email'];
         header('Location: ../html/cursos.php');
         exit;
-    } else {
+    } else /*Senha incorreta */ {
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
-        header('Location: ../html/cursos.php');
+        header('Location: ../html/login.html');
         exit;
     }
 } else {
-    header('Location:../login-register/register.php');
+    header('Location:../login-register/register.html');
     exit;
 }

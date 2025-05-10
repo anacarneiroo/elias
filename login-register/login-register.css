@@ -1,0 +1,90 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  padding: 20px;
+}
+
+span {
+  color: blueviolet;
+}
+
+h1 {
+  font-family: medievalsharp;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+}
+
+main {
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  height: 540px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 50px;
+}
+
+main > h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+input {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 300px;
+  height: 40px;
+  border: 1px solid blueviolet;
+  border-radius: 15px;
+  background-color: transparent;
+  color: white;
+}
+
+main > div {
+  font-size: 16px;
+  text-align: center;
+}
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+.up {
+  background-color: blueviolet;
+  border: none;
+}
+
+.up:active {
+  background-color: transparent;
+  border: 1px solid blueviolet;
+  transition: 1.5s;
+  color: blueviolet;
+}
+
+.up:hover {
+  background-color: rgba(137, 43, 226, 0.815);
+}

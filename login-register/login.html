@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="login-register.css" rel="stylesheet">
+    <link href="../fonts/fonts.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+            <h1><span id="e">E</span>lias - <span id="e">E</span>book</h1>
+    </header>
+    <main>
+        <h2>LOGIN</h2>
+        <form action="../php/logar.php" method="post">
+
+            <input type="email" placeholder="Email" name="email" maxlength="50" required>
+            <input type="password" placeholder="Senha" name="senha" minlength="8" maxlength="8" required>
+
+            <input class="up "type="submit" value="Entrar" name="submit">
+        </form>
+        <div>
+            <p>Não tem uma conta? <br> <a href="./register.html">Criar uma<a></p>
+        </div>
+    </main> 
+</body>
+</html>

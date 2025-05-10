@@ -1,10 +1,4 @@
 <?php
-// Verifica o token CSRF
-
-session_start();
-if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
-    die("Erro: token CSRF inválido.");
-}
 
 include_once('connect.php');
 
